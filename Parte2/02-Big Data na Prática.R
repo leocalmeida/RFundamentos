@@ -8,7 +8,7 @@
 # Instalando e Carregando Pacotes
 install.packages("readr")
 install.packages("data.table")
-library(readr)
+
 library(dplyr)
 library(ggplot2)
 library(readr)
@@ -20,6 +20,7 @@ library(data.table)
 # Carregando os dados (Usando um timer para comparar o tempo de carregamento com diferentes funções)
 
 # Usando read.csv2()
+?read.csv2()
 system.time(df_teste1 <- read.csv2("TemperaturasGlobais.csv"))
 
 
