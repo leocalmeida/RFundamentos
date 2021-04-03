@@ -7,7 +7,7 @@ x = rnorm(10,5,7)
 y = rpois(10,7)
 z = rnorm(10,6,7)
 t = rpois(10,9)
-
+par(mar=c(1,1,1,1))
 
 # Cria o Plot
 plot(x, y, col = 123, pch = 10, main = "Multi Scatterplot",

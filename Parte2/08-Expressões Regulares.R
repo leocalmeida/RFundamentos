@@ -7,6 +7,8 @@
 # regexpr(pattern, text, ignore.case = FALSE, perl = FALSE, fixed = FALSE, useBytes = FALSE)
 # gregexpr(pattern, text, ignore.case = FALSE, perl = FALSE, fixed = FALSE, useBytes = FALSE)
 
+
+
 str <- c("Expressões", "regulares", "em linguagem R", 
          "permitem a busca de padrões", "e exploração de textos",
          "podemos buscar padrões em dígitos",
