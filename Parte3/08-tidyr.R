@@ -14,7 +14,7 @@ df <- data.frame(
 df
 
 df %>%
-  gather(Regiao, NotaFinal, regiaoA:regiaoB)
+  gather(Regiao, NotaFinal, -regiaoA,-regiaoB)
 
 
 # Criando dados
@@ -34,7 +34,15 @@ df2
 df2_organizado1 <- df2 %>%
   gather(key, time, -id, -acao)
 
+df2_alt <- df2 %>%
+  gather(key, time, c(work.T1, work.T2, home.T1, home.T2))
+
+# Obteremos o mesmo resultado
 df2_organizado1 %>% head(8)
+df2_alt %>% head(8)
+
+?gather
+
 
 # Reshape 2
 df2_organizado2 <- df2_organizado1 %>%
@@ -56,6 +64,8 @@ print(df3)
 # Reshape dos dados
 df3 %>%
   gather(day, score, c(day1score, day2score))
+df3 %>%
+  gather(day, score, -participante, -info)
 
 
 df3 %>%

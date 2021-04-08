@@ -12,7 +12,9 @@ suppressMessages(library(dplyr))
 
 
 # Carregando o dataset
-df_sono <- read_csv("http://datascienceacademy.com.br/blog/aluno/RFundamentos/Datasets/Parte3/sono.csv")
+getwd()
+setwd("/home/leonardo/Documents/RFundamentos/Parte3")
+df_sono <- read_csv("sono.csv")
 head(df_sono)
 class(df_sono)
 str(df_sono)
