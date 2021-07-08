@@ -1,0 +1,33 @@
+Análise de Dados e Reproducibilidade
+========================================================
+author: Equipe Data Science Academy
+date: Jul 02, 2016
+autosize: true
+
+Parte 1
+========================================================
+
+Apresentações com RPres são formas profissonais de demonstrar seu trabalho.
+
+- Fornece o Conceito de Reproducibilidade
+- Fácil utilização
+- Permite inserir código e plots
+
+Aqui incluímos código
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Aqui incluímos plots
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Aqui incluímos outras informações
+========================================================
+
+www.datascienceacademy.com.br

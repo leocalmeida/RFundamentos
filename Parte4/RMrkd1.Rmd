@@ -1,0 +1,68 @@
+---
+title: "Análise e Reproducibilidade"
+author: "Equipe Data Science Academy"
+date: "Jul 02, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Este é um documento do tipo R Markdown. Markdown é um formato simples para formatação de arquivos HTML, PDF e WORD. Para mais detalhes veja: <http://rmarkdown.rstudio.com>.
+
+Para usar o knitr, lembre-se de instalar o pacote.
+
+Quando você clicar no botão **Knit** um documento será gerado, incluindo comentários e código. Para criar blocos de código R, utilize chunks, como este abaixo:
+
+```{r pacotes}
+library(ggplot2)
+library(lattice)
+library(knitr)
+```
+```{r dados}
+x <- 1:10
+y <- round(rnorm(10, x, 1), 2)
+df <- data.frame(x, y)
+df
+```
+```{r strresumo}
+str(df)
+```
+
+## Incluindo Plots
+
+Você pode incluir plots no seu documento:
+
+```{r plot único}
+plot(x)
+```
+```{r plots múltiplos}
+boxplot(1:10 ~ rep(1:2,5))
+plot(x, y)
+```
+```{r ggplot}
+qplot(x, y, data = df)
+```
+```{r lattice}
+xyplot(y ~ x)
+```
+
+Você pode incluir `echo = FALSE` para não imprimir o código que gerou o gráfico.
+
+## Incluindo  Tabelas
+
+```{r createtable, results='asis', echo=FALSE}
+cat("x | y", "--- | ---", sep="\n")
+cat(apply(df, 1, function(X) paste(X, collapse=" | ")), sep = "\n")
+```
+
+
+## Controlando o tamanho das figuras
+
+```{r smallplot, fig.width=3, fig.height=3}
+plot(x)
+```
+
